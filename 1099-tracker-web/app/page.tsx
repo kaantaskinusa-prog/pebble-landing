@@ -128,8 +128,8 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-11 h-11 bg-teal-50 border border-teal-100 rounded-2xl flex items-center justify-center text-teal-600 shadow-sm">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 4C7 4 3 8 3 13c0 3.5 2 6.5 5 8 1.5.8 3.5 1 4 1s2.5-.2 4-1c3-1.5 5-4.5 5-8 0-5-4-9-9-9zm0 2c3.9 0 7 3.1 7 7 0 2.2-1.1 4.5-3.3 5.7-1.1.6-2.4.8-3.7.8s-2.6-.2-3.7-.8C6.1 17.5 5 15.2 5 13c0-3.9 3.1-7 7-7z" />
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.5 8.5C16.5 5.5 13.5 4 10 4 5.5 4 3 7.5 3 11.5c0 4.2 3 8.5 8.5 8.5 4 0 7.5-2.5 8.5-6.5 0.3-1.2 0-2.8-1.5-5z" />
               </svg>
             </div>
             <span className="text-2xl font-bold tracking-tight text-slate-950">
