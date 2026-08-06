@@ -10,13 +10,13 @@ const content = {
     faq: "FAQ",
     getPro: "Get Pebble",
     trusted: "Trusted by 10,000+ Independent Contractors",
-    heroTitleFirst: "Pebble — 1099 Expenses",
-    heroTitleSecond: "& Taxes, ",
+    heroTitleFirst: "Pebble — 1099 Earnings,",
+    heroTitleSecond: "Expenses & Taxes, ",
     heroTitleHighlight: "Simplified",
-    heroDesc: "Every pebble builds the road; easily track your finances with Pebble.",
+    heroDesc: "Every pebble builds the road; track your earnings, log expenses, and master your taxes with Pebble.",
     downloadApp: "Download on App Store",
     featuresTitle: "One Toolkit. Total Financial Clarity.",
-    featuresDesc: "Stop drowning in spreadsheets and shoeboxes. Pebble gives you the professional-grade financial control you deserve, without the accounting degree.",
+    featuresDesc: "Stop drowning in spreadsheets and shoeboxes. Pebble gives you professional-grade financial control over your earnings and deductions, without the accounting degree.",
     feat1Title: "AI Receipt Scanner",
     feat1Desc: "Snap a photo of any receipt. Our advanced AI instantly extracts the merchant, date, amount, and tax category, logging it perfectly.",
     feat2Title: "Audit-Ready Reports",
@@ -36,8 +36,8 @@ const content = {
     annualDesc: "That's less than $5/month! Billed annually.",
     annualBadge: "Best Value",
     annualBtn: "Start Annual Subscription",
-    ctaTitle: "Ready to Take Control of Your Taxes?",
-    ctaDesc: "Join thousands of independent contractors who save time and money with Pebble every single week.",
+    ctaTitle: "Ready to Take Control of Your Finances?",
+    ctaDesc: "Join thousands of independent contractors who track their earnings and save money with Pebble every single week.",
     ctaApp: "Download App",
     rights: "All rights reserved."
   },
@@ -47,13 +47,13 @@ const content = {
     faq: "Preguntas Frecuentes",
     getPro: "Obtener Pebble",
     trusted: "Con la confianza de más de 10,000 contratistas",
-    heroTitleFirst: "Pebble — Gastos e Impuestos 1099,",
-    heroTitleSecond: "",
+    heroTitleFirst: "Pebble — Ingresos, Gastos",
+    heroTitleSecond: "e Impuestos 1099, ",
     heroTitleHighlight: "Simplificados",
-    heroDesc: "Cada guijarro construye el camino; lleva tus finanzas fácilmente con Pebble.",
+    heroDesc: "Cada guijarro construye el camino; rastrea tus ingresos, controla tus gastos y domina tus impuestos fácilmente con Pebble.",
     downloadApp: "Descargar en App Store",
     featuresTitle: "Una herramienta. Claridad financiera total.",
-    featuresDesc: "Deje de ahogarse en hojas de cálculo. Pebble le otorga el control financiero de nivel profesional que se merece.",
+    featuresDesc: "Deje de ahogarse en hojas de cálculo. Pebble le otorga control financiero sobre sus ingresos y deducciones sin complicaciones.",
     feat1Title: "Escáner de Recibos con IA",
     feat1Desc: "Tome una foto de cualquier recibo. Nuestra IA avanzada extrae instantáneamente el comercio, la fecha y la categoría.",
     feat2Title: "Informes Listos para Auditoría",
@@ -73,8 +73,8 @@ const content = {
     annualDesc: "¡Menos de $5 al mes! Facturado anualmente.",
     annualBadge: "Mejor Valor",
     annualBtn: "Iniciar Suscripción Anual",
-    ctaTitle: "¿Listo para tomar el control de sus impuestos?",
-    ctaDesc: "Únase a miles de contratistas independientes que ahorran tiempo y dinero con Pebble cada semana.",
+    ctaTitle: "¿Listo para tomar el control de sus finanzas?",
+    ctaDesc: "Únase a miles de contratistas independientes que rastrean sus ingresos y ahorran con Pebble cada semana.",
     ctaApp: "Descargar App",
     rights: "Todos los derechos reservados."
   },
@@ -84,13 +84,13 @@ const content = {
     faq: "S.S.S.",
     getPro: "Pebble'ı İndir",
     trusted: "10.000+ Bağımsız Yüklenicinin Tercihi",
-    heroTitleFirst: "Pebble — 1099 Giderleri",
-    heroTitleSecond: "ve Vergiler,",
+    heroTitleFirst: "Pebble — 1099 Kazançları,",
+    heroTitleSecond: "Giderleri ve Vergileri, ",
     heroTitleHighlight: "Basitleştirildi",
-    heroDesc: "Her çakıl taşı birikerek yolu kurar; hesabını Pebble ile kolayca tut.",
+    heroDesc: "Her çakıl taşı birikerek yolu kurar; kazançlarını takip et, giderlerini yönet ve vergilerini Pebble ile kolayca kontrol altına al.",
     downloadApp: "App Store'dan İndir",
     featuresTitle: "Tek Araç. Tam Finansal Netlik.",
-    featuresDesc: "Tablolarda ve fiş yığınlarında kaybolmaya son. Pebble, muhasebe diplomasına ihtiyaç duymadan profesyonel kontrol sağlar.",
+    featuresDesc: "Tablolarda ve fiş yığınlarında kaybolmaya son. Pebble; kazançlarını ve giderlerini muhasebe diplomasına ihtiyaç duymadan profesyonelce yönetmeni sağlar.",
     feat1Title: "Yapay Zeka Fiş Tarayıcı",
     feat1Desc: "Herhangi bir fişin fotoğrafını çekin. Gelişmiş yapay zekamız satıcıyı, tarihi ve tutarı anında kaydedip kategorize etsin.",
     feat2Title: "Denetime Hazır Raporlar",
@@ -110,8 +110,8 @@ const content = {
     annualDesc: "Ayda 5 dolardan az! Yıllık faturalandırılır.",
     annualBadge: "En İyi Fiyat",
     annualBtn: "Yıllık Aboneliği Başlat",
-    ctaTitle: "Vergilerinizin Kontrolünü Elinize Almaya Hazır mısınız?",
-    ctaDesc: "Her hafta Pebble ile zamandan ve paradan tasarruf eden binlerce bağımsız çalışana katılın.",
+    ctaTitle: "Finansal Durumunun Kontrolünü Eline Almaya Hazır mısın?",
+    ctaDesc: "Her hafta kazançlarını takip edip Pebble ile paradan tasarruf eden binlerce bağımsız çalışana katılın.",
     ctaApp: "Uygulamayı İndir",
     rights: "Tüm hakları saklıdır."
   }
@@ -127,12 +127,9 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            {/* Doğru Ölçeklendirilmiş Orijinal Logo */}
             <div className="w-11 h-11 bg-[#EAF5F2] border border-[#D1EBE5] rounded-2xl flex items-center justify-center relative shadow-sm overflow-hidden">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Arka Koyu Taş */}
                 <path d="M14.5 7.5C17.5 7.5 20 10 19 13.5C18 17 14.5 17.5 12 17C9.5 16.5 7 14 8 11C9 8 11.5 7.5 14.5 7.5Z" fill="#0d9488" />
-                {/* Ön Açık Taş */}
                 <path d="M10 6.5C13 6.5 16 9 15 12.5C14 16 10.5 16.5 8 16C5.5 15.5 3 13 4 10C5 7 7 6.5 10 6.5Z" fill="#2dd4bf" />
               </svg>
             </div>
@@ -177,7 +174,7 @@ export default function LandingPage() {
           </span>
           {t.trusted}
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-950 mb-8 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-slate-950 mb-8 leading-tight">
           {t.heroTitleFirst} <br />{t.heroTitleSecond} <span className="text-teal-600">{t.heroTitleHighlight}</span>.
         </h1>
         <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto font-light">
