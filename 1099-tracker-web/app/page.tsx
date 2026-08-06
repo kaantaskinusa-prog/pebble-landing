@@ -8,14 +8,13 @@ const content = {
     features: "Features",
     pricing: "Pricing",
     faq: "FAQ",
-    getPro: "Get Pebble Pro",
+    getPro: "Get Pebble",
     trusted: "Trusted by 10,000+ Independent Contractors",
     heroTitleFirst: "Pebble — 1099 Expenses",
     heroTitleSecond: "& Taxes, ",
     heroTitleHighlight: "Simplified",
-    heroDesc: "The essential financial toolkit built specifically for freelancers, gig workers, and self-employed professionals. Scan, track, and report with ease.",
+    heroDesc: "Every pebble builds the road; easily track your finances with Pebble.",
     downloadApp: "Download on App Store",
-    webSpecial: "Web Special (-50% OFF)",
     featuresTitle: "One Toolkit. Total Financial Clarity.",
     featuresDesc: "Stop drowning in spreadsheets and shoeboxes. Pebble gives you the professional-grade financial control you deserve, without the accounting degree.",
     feat1Title: "AI Receipt Scanner",
@@ -25,7 +24,7 @@ const content = {
     feat3Title: "Bank-Grade Security",
     feat3Desc: "Your financial data is precious. Pebble uses end-to-end encryption and secure cloud storage to ensure your information remains private and protected.",
     pricingTitle: "Simple Pricing, Massive Savings",
-    pricingDesc: "Choose the plan that fits your workflow. Save big with our annual web-exclusive offer.",
+    pricingDesc: "Choose the plan that fits your workflow. Subscribe securely via the App Store.",
     monthlyPlan: "Monthly",
     monthlyPrice: "$9.99",
     monthlyPeriod: "/mo",
@@ -34,27 +33,25 @@ const content = {
     annualPlan: "Annual Pro",
     annualPrice: "$59",
     annualPeriod: "/yr",
-    annualDesc: "That's less than $5/month! (Web Exclusive)",
-    annualBadge: "Best Value (-50%)",
-    annualBtn: "Secure Web Checkout ($59)",
+    annualDesc: "That's less than $5/month! Billed annually.",
+    annualBadge: "Best Value",
+    annualBtn: "Start Annual Subscription",
     ctaTitle: "Ready to Take Control of Your Taxes?",
     ctaDesc: "Join thousands of independent contractors who save time and money with Pebble every single week.",
     ctaApp: "Download App",
-    ctaWeb: "Get Yearly Access ($59)",
     rights: "All rights reserved."
   },
   es: {
     features: "Características",
     pricing: "Precios",
     faq: "Preguntas Frecuentes",
-    getPro: "Obtener Pebble Pro",
+    getPro: "Obtener Pebble",
     trusted: "Con la confianza de más de 10,000 contratistas",
     heroTitleFirst: "Pebble — Gastos e Impuestos 1099,",
     heroTitleSecond: "",
     heroTitleHighlight: "Simplificados",
-    heroDesc: "La caja de herramientas financieras esencial diseñada específicamente para trabajadores independientes. Escanee, rastree e informe con facilidad.",
+    heroDesc: "Cada guijarro construye el camino; lleva tus finanzas fácilmente con Pebble.",
     downloadApp: "Descargar en App Store",
-    webSpecial: "Especial Web (-50% DCTO)",
     featuresTitle: "Una herramienta. Claridad financiera total.",
     featuresDesc: "Deje de ahogarse en hojas de cálculo. Pebble le otorga el control financiero de nivel profesional que se merece.",
     feat1Title: "Escáner de Recibos con IA",
@@ -64,7 +61,7 @@ const content = {
     feat3Title: "Seguridad Bancaria",
     feat3Desc: "Sus datos financieros son valiosos. Pebble utiliza encriptación de extremo a extremo para mantener su privacidad.",
     pricingTitle: "Precios Simples, Ahorros Masivos",
-    pricingDesc: "Elija el plan que se adapte a su flujo de trabajo. Ahorre en grande con nuestra oferta anual exclusiva web.",
+    pricingDesc: "Elija el plan que se adapte a su flujo de trabajo. Suscríbase de forma segura a través de la App Store.",
     monthlyPlan: "Mensual",
     monthlyPrice: "$9.99",
     monthlyPeriod: "/mes",
@@ -73,27 +70,25 @@ const content = {
     annualPlan: "Pro Anual",
     annualPrice: "$59",
     annualPeriod: "/año",
-    annualDesc: "¡Menos de $5 al mes! (Exclusivo Web)",
-    annualBadge: "Mejor Valor (-50%)",
-    annualBtn: "Pago Web Seguro ($59)",
+    annualDesc: "¡Menos de $5 al mes! Facturado anualmente.",
+    annualBadge: "Mejor Valor",
+    annualBtn: "Iniciar Suscripción Anual",
     ctaTitle: "¿Listo para tomar el control de sus impuestos?",
     ctaDesc: "Únase a miles de contratistas independientes que ahorran tiempo y dinero con Pebble cada semana.",
     ctaApp: "Descargar App",
-    ctaWeb: "Obtener Acceso Anual ($59)",
     rights: "Todos los derechos reservados."
   },
   tr: {
     features: "Özellikler",
     pricing: "Fiyatlandırma",
     faq: "S.S.S.",
-    getPro: "Pebble Pro'ya Geç",
+    getPro: "Pebble'ı İndir",
     trusted: "10.000+ Bağımsız Yüklenicinin Tercihi",
     heroTitleFirst: "Pebble — 1099 Giderleri",
     heroTitleSecond: "ve Vergiler,",
     heroTitleHighlight: "Basitleştirildi",
-    heroDesc: "Serbest çalışanlar, gig kuryeler ve bağımsız profesyoneller için özel olarak tasarlanmış finansal araç. Tarayın, takip edin, raporlayın.",
+    heroDesc: "Her çakıl taşı birikerek yolu kurar; hesabını Pebble ile kolayca tut.",
     downloadApp: "App Store'dan İndir",
-    webSpecial: "Web'e Özel (-%50 İNDİRİM)",
     featuresTitle: "Tek Araç. Tam Finansal Netlik.",
     featuresDesc: "Tablolarda ve fiş yığınlarında kaybolmaya son. Pebble, muhasebe diplomasına ihtiyaç duymadan profesyonel kontrol sağlar.",
     feat1Title: "Yapay Zeka Fiş Tarayıcı",
@@ -103,7 +98,7 @@ const content = {
     feat3Title: "Banka Düzeyinde Güvenlik",
     feat3Desc: "Finansal verileriniz güvende. Pebble, uçtan uca şifreleme ve güvenli bulut altyapısı kullanır.",
     pricingTitle: "Basit Fiyatlandırma, Büyük Tasarruf",
-    pricingDesc: "Akışınıza uygun planı seçin. Yıllık web'e özel teklifimizle büyük tasarruf sağlayın.",
+    pricingDesc: "Akışınıza uygun planı seçin. App Store üzerinden güvenle abone olun.",
     monthlyPlan: "Aylık",
     monthlyPrice: "$9.99",
     monthlyPeriod: "/ay",
@@ -112,13 +107,12 @@ const content = {
     annualPlan: "Yıllık Pro",
     annualPrice: "$59",
     annualPeriod: "/yıl",
-    annualDesc: "Ayda 5 dolardan az! (Web'e Özel)",
-    annualBadge: "En İyi Fiyat (-%50)",
-    annualBtn: "Güvenli Web Ödemesi ($59)",
+    annualDesc: "Ayda 5 dolardan az! Yıllık faturalandırılır.",
+    annualBadge: "En İyi Fiyat",
+    annualBtn: "Yıllık Aboneliği Başlat",
     ctaTitle: "Vergilerinizin Kontrolünü Elinize Almaya Hazır mısınız?",
     ctaDesc: "Her hafta Pebble ile zamandan ve paradan tasarruf eden binlerce bağımsız çalışana katılın.",
     ctaApp: "Uygulamayı İndir",
-    ctaWeb: "Yıllık Erişim Al ($59)",
     rights: "Tüm hakları saklıdır."
   }
 };
@@ -133,11 +127,11 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" rx="12" fill="#0D9488" fillOpacity="0.12"/>
-              <path d="M12 24C12 18.4772 16.4772 14 22 14H26C28.2091 14 30 15.7909 30 18C30 23.5228 25.5228 28 20 28H16C13.7909 28 12 26.2091 12 24Z" fill="#0D9488"/>
-              <path d="M10 20C10 15.5817 13.5817 12 18 12H20C22.2091 12 24 13.7909 24 16C24 20.4183 20.4183 24 16 24H14C11.7909 24 10 22.2091 10 20Z" fill="#2DD4BF"/>
-            </svg>
+            <div className="w-11 h-11 bg-teal-50 border border-teal-100 rounded-2xl flex items-center justify-center text-teal-600 shadow-sm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4C7 4 3 8 3 13c0 3.5 2 6.5 5 8 1.5.8 3.5 1 4 1s2.5-.2 4-1c3-1.5 5-4.5 5-8 0-5-4-9-9-9zm0 2c3.9 0 7 3.1 7 7 0 2.2-1.1 4.5-3.3 5.7-1.1.6-2.4.8-3.7.8s-2.6-.2-3.7-.8C6.1 17.5 5 15.2 5 13c0-3.9 3.1-7 7-7z" />
+              </svg>
+            </div>
             <span className="text-2xl font-bold tracking-tight text-slate-950">
               Pebble
             </span>
@@ -150,7 +144,6 @@ export default function LandingPage() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            {/* Dil Seçici (Language Selector Dropdown) */}
             <select
               value={lang}
               onChange={(e) => setLang(e.target.value as 'en' | 'es' | 'tr')}
@@ -162,7 +155,7 @@ export default function LandingPage() {
             </select>
 
             <a
-              href="https://buy.stripe.com/your_actual_stripe_link" 
+              href="https://apps.apple.com" 
               className="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm transition"
             >
               {t.getPro}
@@ -186,19 +179,13 @@ export default function LandingPage() {
         <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto font-light">
           {t.heroDesc}
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex justify-center">
           <a
             href="https://apps.apple.com" 
             className="bg-slate-950 hover:bg-slate-800 text-white font-semibold px-10 py-4 rounded-xl shadow-lg transition flex items-center justify-center space-x-2 text-lg"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.05 0C18.65 0 24 5.35 24 11.95c0 6.6-5.35 11.95-11.95 11.95S0 18.55 0 11.95C0 5.35 5.35 0 12.05 0zm5.45 13.7c-.9.75-2.1 1.1-3.5 1.1-1.45 0-2.75-.45-3.85-1.35-1.15-.9-1.8-2.2-1.95-3.85-.15-1.85.3-3.45 1.35-4.55.9-.9 2.1-1.35 3.55-1.35 1.35 0 2.55.4 3.65 1.25 1.1.85 1.75 2.05 1.9 3.65.15 1.9-.25 3.55-1.25 4.5zm.5 8.6c-.65.65-1.4.95-2.25.95s-1.6-.35-2.25-1.05c-.65-.75-.9-1.55-.9-2.55 0-.9.3-1.7.9-2.35.65-.65 1.45-1 2.35-1s1.7.35 2.35.95c.65.65 1 1.55 1 2.55 0 1-.25 1.9-.85 2.5z"/></svg>
             <span>{t.downloadApp}</span>
-          </a>
-          <a
-            href="#pricing"
-            className="bg-teal-50 text-teal-700 hover:bg-teal-100 font-semibold px-10 py-4 rounded-xl transition flex items-center justify-center text-lg border border-teal-100"
-          >
-            {t.webSpecial}
           </a>
         </div>
       </section>
@@ -259,7 +246,7 @@ export default function LandingPage() {
             </a>
           </div>
 
-          {/* Yearly Plan (Stripe Highlighted) */}
+          {/* Yearly Plan */}
           <div className="bg-gradient-to-b from-teal-800 to-teal-950 text-white p-10 rounded-3xl shadow-2xl flex flex-col justify-between relative overflow-hidden h-full transform scale-105 border-4 border-teal-200">
             <div className="absolute top-6 right-6 bg-amber-400 text-slate-950 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
               {t.annualBadge}
@@ -270,13 +257,12 @@ export default function LandingPage() {
               <p className="text-sm text-teal-200 mb-8">{t.annualDesc}</p>
               <ul className="space-y-4 text-base text-teal-50 mb-10 font-light">
                 <li className="flex items-start gap-3">✓ <span className='flex-1'>Everything in Monthly, plus:</span></li>
-                <li className="flex items-start gap-3">✓ <span className='flex-1'><strong>Zero Platform Fees</strong></span></li>
                 <li className="flex items-start gap-3">✓ <span className='flex-1'><strong>Priority Support</strong></span></li>
                 <li className="flex items-start gap-3">✓ <span className='flex-1'>Advanced Data Export</span></li>
               </ul>
             </div>
             <a 
-              href="https://buy.stripe.com/your_actual_stripe_link" 
+              href="https://apps.apple.com" 
               className="w-full bg-white text-teal-700 font-bold py-4 rounded-xl text-center hover:bg-teal-50 transition text-lg shadow-xl"
             >
               {t.annualBtn}
@@ -290,12 +276,9 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto bg-teal-900 text-white rounded-3xl p-12 text-center shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.ctaTitle}</h2>
           <p className="text-teal-200 mb-8 max-w-xl mx-auto font-light">{t.ctaDesc}</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex justify-center">
             <a href="https://apps.apple.com" className="bg-white text-teal-900 font-bold px-8 py-3.5 rounded-xl transition hover:bg-teal-50">
               {t.ctaApp}
-            </a>
-            <a href="https://buy.stripe.com/your_actual_stripe_link" className="bg-teal-700 text-white font-semibold px-8 py-3.5 rounded-xl transition hover:bg-teal-600 border border-teal-600">
-              {t.ctaWeb}
             </a>
           </div>
         </div>
@@ -308,7 +291,7 @@ export default function LandingPage() {
           <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-slate-900 transition">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-slate-900 transition">Terms of Service</Link>
-            <a href="mailto:support@pebble.app" className="hover:text-slate-900 transition">Support</a>
+            <a href="mailto:support@usepebble.co" className="hover:text-slate-900 transition">Support</a>
           </div>
         </div>
       </footer>
