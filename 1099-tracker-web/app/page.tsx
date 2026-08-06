@@ -127,9 +127,13 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-11 h-11 bg-teal-50 border border-teal-100 rounded-2xl flex items-center justify-center text-teal-600 shadow-sm">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.5 8.5C16.5 5.5 13.5 4 10 4 5.5 4 3 7.5 3 11.5c0 4.2 3 8.5 8.5 8.5 4 0 7.5-2.5 8.5-6.5 0.3-1.2 0-2.8-1.5-5z" />
+            {/* Doğru Ölçeklendirilmiş Orijinal Logo */}
+            <div className="w-11 h-11 bg-[#EAF5F2] border border-[#D1EBE5] rounded-2xl flex items-center justify-center relative shadow-sm overflow-hidden">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Arka Koyu Taş */}
+                <path d="M14.5 7.5C17.5 7.5 20 10 19 13.5C18 17 14.5 17.5 12 17C9.5 16.5 7 14 8 11C9 8 11.5 7.5 14.5 7.5Z" fill="#0d9488" />
+                {/* Ön Açık Taş */}
+                <path d="M10 6.5C13 6.5 16 9 15 12.5C14 16 10.5 16.5 8 16C5.5 15.5 3 13 4 10C5 7 7 6.5 10 6.5Z" fill="#2dd4bf" />
               </svg>
             </div>
             <span className="text-2xl font-bold tracking-tight text-slate-950">
