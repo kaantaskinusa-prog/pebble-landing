@@ -15,6 +15,8 @@ const content = {
     heroTitleHighlight: "Simplified",
     heroDesc: "Every pebble builds the road; track your earnings, log expenses, and master your taxes with Pebble.",
     downloadApp: "Download on App Store",
+    previewTitle: "Designed for Independent Contractors",
+    previewSubtitle: "Take a look inside the app. Clean, powerful, and built to save you time and money.",
     featuresTitle: "One Toolkit. Total Financial Clarity.",
     featuresDesc: "Stop drowning in spreadsheets and shoeboxes. Pebble gives you professional-grade financial control over your earnings and deductions, without the accounting degree.",
     feat1Title: "AI Receipt Scanner",
@@ -52,6 +54,8 @@ const content = {
     heroTitleHighlight: "Simplificados",
     heroDesc: "Cada guijarro construye el camino; rastrea tus ingresos, controla tus gastos y domina tus impuestos fácilmente con Pebble.",
     downloadApp: "Descargar en App Store",
+    previewTitle: "Diseñado para Contratistas Independientes",
+    previewSubtitle: "Echa un vistazo al interior de la app. Limpia, potente y diseñada para ahorrarte tiempo y dinero.",
     featuresTitle: "Una herramienta. Claridad financiera total.",
     featuresDesc: "Deje de ahogarse en hojas de cálculo. Pebble le otorga control financiero sobre sus ingresos y deducciones sin complicaciones.",
     feat1Title: "Escáner de Recibos con IA",
@@ -89,6 +93,8 @@ const content = {
     heroTitleHighlight: "Basitleştirildi",
     heroDesc: "Her çakıl taşı birikerek yolu kurar; kazançlarını takip et, giderlerini yönet ve vergilerini Pebble ile kolayca kontrol altına al.",
     downloadApp: "App Store'dan İndir",
+    previewTitle: "Bağımsız Çalışanlar İçin Tasarlandı",
+    previewSubtitle: "Uygulamanın içine göz atın. Zamandan ve paradan tasarruf etmeniz için tertemiz ve güçlü bir deneyim.",
     featuresTitle: "Tek Araç. Tam Finansal Netlik.",
     featuresDesc: "Tablolarda ve fiş yığınlarında kaybolmaya son. Pebble; kazançlarını ve giderlerini muhasebe diplomasına ihtiyaç duymadan profesyonelce yönetmeni sağlar.",
     feat1Title: "Yapay Zeka Fiş Tarayıcı",
@@ -166,7 +172,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-20 px-6 text-center max-w-5xl mx-auto bg-white">
+      <section className="pt-24 pb-16 px-6 text-center max-w-5xl mx-auto bg-white">
         <div className="inline-flex items-center gap-2 bg-teal-50 text-teal-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8 border border-teal-100">
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
@@ -191,25 +197,63 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* App Screenshots Showcase Section (4 Screens) */}
+      <section className="py-16 bg-slate-50 border-t border-slate-100 px-6">
+        <div className="max-w-6xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-950 mb-4">{t.previewTitle}</h2>
+          <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">{t.previewSubtitle}</p>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+          {/* 1. Dashboard */}
+          <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300">
+            <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
+              <img src="/screen-dashboard.jpg" alt="Dashboard Screen" className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* 2. Tax & 1099 */}
+          <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300 lg:-translate-y-4">
+            <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
+              <img src="/screen-tax.jpg" alt="Tax and 1099 Screen" className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* 3. History */}
+          <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300">
+            <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
+              <img src="/screen-history.png" alt="History Screen" className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* 4. Profile */}
+          <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300 lg:-translate-y-4">
+            <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
+              <img src="/screen-profile.jpg" alt="Profile Screen" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Grid */}
-      <section id="features" className="py-24 bg-slate-50 px-6 border-y border-slate-100">
+      <section id="features" className="py-24 bg-white px-6 border-y border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl font-bold tracking-tight mb-6 text-slate-950">{t.featuresTitle}</h2>
             <p className="text-lg text-slate-600 font-light">{t.featuresDesc}</p>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-8 border border-teal-100">⚡</div>
               <h3 className="text-2xl font-semibold mb-4 text-slate-950">{t.feat1Title}</h3>
               <p className="text-slate-600 leading-relaxed font-light">{t.feat1Desc}</p>
             </div>
-            <div className="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-8 border border-teal-100">📊</div>
               <h3 className="text-2xl font-semibold mb-4 text-slate-950">{t.feat2Title}</h3>
               <p className="text-slate-600 leading-relaxed font-light">{t.feat2Desc}</p>
             </div>
-            <div className="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-8 border border-teal-100">🔒</div>
               <h3 className="text-2xl font-semibold mb-4 text-slate-950">{t.feat3Title}</h3>
               <p className="text-slate-600 leading-relaxed font-light">{t.feat3Desc}</p>
@@ -219,7 +263,7 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 px-6 max-w-5xl mx-auto bg-white">
+      <section id="pricing" className="py-24 px-6 max-w-5xl mx-auto bg-slate-50">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl font-bold tracking-tight mb-6 text-slate-950">{t.pricingTitle}</h2>
           <p className="text-lg text-slate-600 font-light">{t.pricingDesc}</p>
@@ -227,7 +271,7 @@ export default function LandingPage() {
         <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto items-start">
           
           {/* Monthly Plan */}
-          <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 flex flex-col justify-between h-full">
+          <div className="bg-white p-10 rounded-3xl border border-slate-100 flex flex-col justify-between h-full shadow-sm">
             <div>
               <h3 className="text-2xl font-semibold text-slate-800 mb-3">{t.monthlyPlan}</h3>
               <div className="text-5xl font-extrabold text-slate-950 mb-1 tracking-tight">{t.monthlyPrice}<span className="text-2xl font-medium text-slate-500">{t.monthlyPeriod}</span></div>
@@ -273,7 +317,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 px-6 bg-slate-50 border-t border-slate-100">
+      <section className="py-20 px-6 bg-white border-t border-slate-100">
         <div className="max-w-4xl mx-auto bg-teal-900 text-white rounded-3xl p-12 text-center shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.ctaTitle}</h2>
           <p className="text-teal-200 mb-8 max-w-xl mx-auto font-light">{t.ctaDesc}</p>
@@ -286,7 +330,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-100 py-12 px-6">
+      <footer className="bg-slate-50 border-t border-slate-100 py-12 px6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 gap-4">
           <div>&copy; {new Date().getFullYear()} Pebble. {t.rights}</div>
           <div className="flex space-x-6">
