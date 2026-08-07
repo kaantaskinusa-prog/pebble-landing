@@ -207,16 +207,25 @@ export default function LandingPage() {
         <a href="https://apps.apple.com" className="bg-slate-950 text-white px-10 py-4 rounded-xl text-lg font-semibold">{t.downloadApp}</a>
       </section>
 
+      {/* Preview Section with Hover Effects */}
       <section className="py-16 bg-slate-50 border-t border-slate-100 px-6">
         <div className="max-w-6xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">{t.previewTitle}</h2>
           <p className="text-lg text-slate-600">{t.previewSubtitle}</p>
         </div>
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-slate-900 p-2 rounded-[36px]"><img src="/screen-dashboard.jpg" alt="Dash" className="rounded-[28px]" /></div>
-          <div className="bg-slate-900 p-2 rounded-[36px]"><img src="/screen-tax.jpg" alt="Tax" className="rounded-[28px]" /></div>
-          <div className="bg-slate-900 p-2 rounded-[36px]"><img src="/screen-history.png" alt="History" className="rounded-[28px]" /></div>
-          <div className="bg-slate-900 p-2 rounded-[36px]"><img src="/screen-profile.jpg" alt="Profile" className="rounded-[28px]" /></div>
+          <div className="bg-slate-900 p-2 rounded-[36px] shadow-lg transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl">
+            <img src="/screen-dashboard.jpg" alt="Dash" className="rounded-[28px]" />
+          </div>
+          <div className="bg-slate-900 p-2 rounded-[36px] shadow-lg transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl">
+            <img src="/screen-tax.jpg" alt="Tax" className="rounded-[28px]" />
+          </div>
+          <div className="bg-slate-900 p-2 rounded-[36px] shadow-lg transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl">
+            <img src="/screen-history.png" alt="History" className="rounded-[28px]" />
+          </div>
+          <div className="bg-slate-900 p-2 rounded-[36px] shadow-lg transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl">
+            <img src="/screen-profile.jpg" alt="Profile" className="rounded-[28px]" />
+          </div>
         </div>
       </section>
 
