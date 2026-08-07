@@ -36,12 +36,23 @@ const content = {
     monthlyPeriod: "/mo",
     monthlyDesc: "Billed monthly via App Store.",
     monthlyBtn: "Start Free Trial on App Store",
+    monthlyFeats: [
+      "Unlimited receipt scanning (AI OCR)",
+      "Automatic business expense categorization",
+      "Schedule C PDF Tax Report Export",
+      "Basic email support"
+    ],
     annualPlan: "Annual Pro",
     annualPrice: "$59",
     annualPeriod: "/yr",
     annualDesc: "That's less than $5/month! Billed annually.",
-    annualBadge: "Best Value",
+    annualBadge: "BEST VALUE",
     annualBtn: "Start Annual Subscription",
+    annualFeats: [
+      "Everything In Monthly, plus:",
+      "Priority Support",
+      "Advanced Data Export"
+    ],
     ctaTitle: "Ready to Take Control of Your Finances?",
     ctaDesc: "Join thousands of independent contractors who track their earnings and save money with Pebble every single week.",
     ctaApp: "Download App",
@@ -79,12 +90,23 @@ const content = {
     monthlyPeriod: "/mes",
     monthlyDesc: "Facturado mensualmente a través de App Store.",
     monthlyBtn: "Iniciar Prueba en App Store",
+    monthlyFeats: [
+      "Escaneo ilimitado de recibos (IA OCR)",
+      "Categorización automática de gastos",
+      "Exportación de informes fiscales PDF",
+      "Soporte por correo básico"
+    ],
     annualPlan: "Pro Anual",
     annualPrice: "$59",
     annualPeriod: "/año",
     annualDesc: "¡Menos de $5 al mes! Facturado anualmente.",
-    annualBadge: "Mejor Valor",
+    annualBadge: "MEJOR VALOR",
     annualBtn: "Iniciar Suscripción Anual",
+    annualFeats: [
+      "Todo lo del plan mensual, más:",
+      "Soporte prioritario",
+      "Exportación de datos avanzada"
+    ],
     ctaTitle: "¿Listo para tomar el control de sus finanzas?",
     ctaDesc: "Únase a miles de contratistas independientes que rastrean sus ingresos y ahorran con Pebble cada semana.",
     ctaApp: "Descargar App",
@@ -122,12 +144,23 @@ const content = {
     monthlyPeriod: "/ay",
     monthlyDesc: "App Store üzerinden aylık faturalandırılır.",
     monthlyBtn: "App Store'da Ücretsiz Dene",
+    monthlyFeats: [
+      "Sınırsız fiş tarama (Yapay Zeka OCR)",
+      "Otomatik işletme gideri sınıflandırma",
+      "Schedule C PDF Vergi Raporu Dışa Aktarımı",
+      "Temel e-posta desteği"
+    ],
     annualPlan: "Yıllık Pro",
     annualPrice: "$59",
     annualPeriod: "/yıl",
     annualDesc: "Ayda 5 dolardan az! Yıllık faturalandırılır.",
-    annualBadge: "En İyi Fiyat",
+    annualBadge: "EN İYİ FİYAT",
     annualBtn: "Yıllık Aboneliği Başlat",
+    annualFeats: [
+      "Aylık plandaki her şeye ek olarak:",
+      "Öncelikli Destek",
+      "Gelişmiş Veri Dışa Aktarımı"
+    ],
     ctaTitle: "Finansal Durumunun Kontrolünü Eline Almaya Hazır mısın?",
     ctaDesc: "Her hafta kazançlarını takip edip Pebble ile paradan tasarruf eden binlerce bağımsız çalışana katılın.",
     ctaApp: "Uygulamayı İndir",
@@ -200,25 +233,80 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-slate-50 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">{t.pricingTitle}</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-3xl border border-slate-100">
-              <h3 className="text-xl font-bold mb-2">{t.monthlyPlan}</h3>
-              <p className="text-4xl font-extrabold mb-4">{t.monthlyPrice}<span className="text-lg text-slate-500 font-normal">{t.monthlyPeriod}</span></p>
-              <a href="https://apps.apple.com" className="block w-full text-center py-3 rounded-xl bg-slate-900 text-white font-semibold">{t.monthlyBtn}</a>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-extrabold text-center mb-4 tracking-tight">{t.pricingTitle}</h2>
+          <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">{t.pricingDesc}</p>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Monthly Card */}
+            <div className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-slate-900">{t.monthlyPlan}</h3>
+                <div className="flex items-baseline mb-3">
+                  <span className="text-5xl font-extrabold tracking-tight text-slate-950">{t.monthlyPrice}</span>
+                  <span className="text-slate-500 ml-1 font-medium">{t.monthlyPeriod}</span>
+                </div>
+                <p className="text-xs text-slate-500 mb-8">{t.monthlyDesc}</p>
+                
+                <ul className="space-y-4 mb-8 text-sm text-slate-700">
+                  {t.monthlyFeats.map((feat, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <span className="text-teal-600 font-bold mr-3">✓</span> {feat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a href="https://apps.apple.com" className="block w-full text-center py-4 rounded-2xl bg-slate-950 text-white font-semibold hover:bg-slate-800 transition shadow-md">
+                {t.monthlyBtn}
+              </a>
             </div>
-            <div className="bg-teal-900 p-8 rounded-3xl text-white">
-              <h3 className="text-xl font-bold mb-2">{t.annualPlan}</h3>
-              <p className="text-4xl font-extrabold mb-4">{t.annualPrice}<span className="text-lg text-teal-200 font-normal">{t.annualPeriod}</span></p>
-              <a href="https://apps.apple.com" className="block w-full text-center py-3 rounded-xl bg-white text-teal-900 font-semibold">{t.annualBtn}</a>
+
+            {/* Annual Card */}
+            <div className="bg-teal-950 text-white p-8 rounded-[32px] border-2 border-teal-600 shadow-xl flex flex-col justify-between relative">
+              <div className="absolute -top-4 right-8 bg-amber-400 text-slate-950 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                {t.annualBadge}
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-white">{t.annualPlan}</h3>
+                <div className="flex items-baseline mb-3">
+                  <span className="text-5xl font-extrabold tracking-tight text-white">{t.annualPrice}</span>
+                  <span className="text-teal-300 ml-1 font-medium">{t.annualPeriod}</span>
+                </div>
+                <p className="text-xs text-teal-200/80 mb-8">{t.annualDesc}</p>
+                
+                <ul className="space-y-4 mb-8 text-sm text-teal-100">
+                  {t.annualFeats.map((feat, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <span className="text-teal-400 font-bold mr-3">✓</span> {feat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a href="https://apps.apple.com" className="block w-full text-center py-4 rounded-2xl bg-white text-teal-950 font-semibold hover:bg-teal-50 transition shadow-md">
+                {t.annualBtn}
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="py-12 px-6 bg-slate-50 border-t text-center text-slate-500">
+      {/* CTA Banner Section */}
+      <section className="py-16 px-6 bg-slate-50">
+        <div className="max-w-5xl mx-auto bg-teal-950 rounded-[36px] py-16 px-8 text-center text-white shadow-xl">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">{t.ctaTitle}</h2>
+          <p className="text-teal-200/90 max-w-2xl mx-auto mb-10 text-sm md:text-base leading-relaxed">{t.ctaDesc}</p>
+          <a href="https://apps.apple.com" className="inline-block bg-white text-teal-950 font-bold px-8 py-4 rounded-2xl hover:bg-teal-50 transition shadow-lg">
+            {t.ctaApp}
+          </a>
+        </div>
+      </section>
+
+      <footer className="py-12 px-6 bg-slate-50 border-t text-center text-slate-500 text-sm">
         &copy; {new Date().getFullYear()} Pebble. {t.rights}
       </footer>
     </div>
