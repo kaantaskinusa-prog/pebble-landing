@@ -25,6 +25,8 @@ const content = {
     feat2Desc: "Generate IRS-compliant Schedule C reports instantly. Export clean PDFs or CSVs for your accountant, making tax season stress-free.",
     feat3Title: "Bank-Grade Security",
     feat3Desc: "Your financial data is precious. Pebble uses end-to-end encryption and secure cloud storage to ensure your information remains private and protected.",
+    feat4Title: "Multi-Language Support",
+    feat4Desc: "Available in English, Spanish, and Turkish. Manage your finances comfortably in your native language for maximum accuracy.",
     pricingTitle: "Simple Pricing, Massive Savings",
     pricingDesc: "Choose the plan that fits your workflow. Subscribe securely via the App Store.",
     monthlyPlan: "Monthly",
@@ -64,6 +66,8 @@ const content = {
     feat2Desc: "Genere informes Schedule C compatibles con el IRS al instante. Exporte PDF o CSV limpios para su contador.",
     feat3Title: "Seguridad Bancaria",
     feat3Desc: "Sus datos financieros son valiosos. Pebble utiliza encriptación de extremo a extremo para mantener su privacidad.",
+    feat4Title: "Soporte Multiidioma",
+    feat4Desc: "Disponible en inglés, español y turco. Administre sus finanzas cómodamente en su idioma nativo.",
     pricingTitle: "Precios Simples, Ahorros Masivos",
     pricingDesc: "Elija el plan que se adapte a su flujo de trabajo. Suscríbase de forma segura a través de la App Store.",
     monthlyPlan: "Mensual",
@@ -103,6 +107,8 @@ const content = {
     feat2Desc: "IRS uyumlu Schedule C raporlarını anında oluşturun. Muhasebeciniz için temiz PDF veya CSV olarak dışa aktarın.",
     feat3Title: "Banka Düzeyinde Güvenlik",
     feat3Desc: "Finansal verileriniz güvende. Pebble, uçtan uca şifreleme ve güvenli bulut altyapısı kullanır.",
+    feat4Title: "Çoklu Dil Desteği",
+    feat4Desc: "İngilizce, İspanyolca ve Türkçe seçenekleriyle. Finansal işlemlerinizi kendi anadilinizde konforla yönetin.",
     pricingTitle: "Basit Fiyatlandırma, Büyük Tasarruf",
     pricingDesc: "Akışınıza uygun planı seçin. App Store üzerinden güvenle abone olun.",
     monthlyPlan: "Aylık",
@@ -129,7 +135,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
-      {/* Header / Navbar (Büyük ve Karizmatik Logo) */}
+      {/* Header / Navbar */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -205,28 +211,24 @@ export default function LandingPage() {
         </div>
 
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
-          {/* 1. Dashboard */}
           <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300">
             <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
               <img src="/screen-dashboard.jpg" alt="Dashboard Screen" className="w-full h-full object-cover" />
             </div>
           </div>
 
-          {/* 2. Tax & 1099 */}
           <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300 lg:-translate-y-4">
             <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
               <img src="/screen-tax.jpg" alt="Tax and 1099 Screen" className="w-full h-full object-cover" />
             </div>
           </div>
 
-          {/* 3. History */}
           <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300">
             <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
               <img src="/screen-history.png" alt="History Screen" className="w-full h-full object-cover" />
             </div>
           </div>
 
-          {/* 4. Profile */}
           <div className="bg-slate-900 p-2.5 rounded-[36px] shadow-2xl border-4 border-slate-800 transform hover:-translate-y-2 transition duration-300 lg:-translate-y-4">
             <div className="overflow-hidden rounded-[28px] bg-white aspect-[9/19] relative">
               <img src="/screen-profile.jpg" alt="Profile Screen" className="w-full h-full object-cover" />
@@ -235,28 +237,33 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Features Grid (4 Özellik) */}
       <section id="features" className="py-24 bg-white px-6 border-y border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl font-bold tracking-tight mb-6 text-slate-950">{t.featuresTitle}</h2>
             <p className="text-lg text-slate-600 font-light">{t.featuresDesc}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-8 border border-teal-100">⚡</div>
-              <h3 className="text-2xl font-semibold mb-4 text-slate-950">{t.feat1Title}</h3>
-              <p className="text-slate-600 leading-relaxed font-light">{t.feat1Desc}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-6 border border-teal-100">⚡</div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-950">{t.feat1Title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed font-light">{t.feat1Desc}</p>
             </div>
-            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-8 border border-teal-100">📊</div>
-              <h3 className="text-2xl font-semibold mb-4 text-slate-950">{t.feat2Title}</h3>
-              <p className="text-slate-600 leading-relaxed font-light">{t.feat2Desc}</p>
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-6 border border-teal-100">📊</div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-950">{t.feat2Title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed font-light">{t.feat2Desc}</p>
             </div>
-            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-8 border border-teal-100">🔒</div>
-              <h3 className="text-2xl font-semibold mb-4 text-slate-950">{t.feat3Title}</h3>
-              <p className="text-slate-600 leading-relaxed font-light">{t.feat3Desc}</p>
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-6 border border-teal-100">🔒</div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-950">{t.feat3Title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed font-light">{t.feat3Desc}</p>
+            </div>
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-6 border border-teal-100">🌍</div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-950">{t.feat4Title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed font-light">{t.feat4Desc}</p>
             </div>
           </div>
         </div>
@@ -270,7 +277,6 @@ export default function LandingPage() {
         </div>
         <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto items-start">
           
-          {/* Monthly Plan */}
           <div className="bg-white p-10 rounded-3xl border border-slate-100 flex flex-col justify-between h-full shadow-sm">
             <div>
               <h3 className="text-2xl font-semibold text-slate-800 mb-3">{t.monthlyPlan}</h3>
@@ -291,7 +297,6 @@ export default function LandingPage() {
             </a>
           </div>
 
-          {/* Yearly Plan */}
           <div className="bg-gradient-to-b from-teal-800 to-teal-950 text-white p-10 rounded-3xl shadow-2xl flex flex-col justify-between relative overflow-hidden h-full transform scale-105 border-4 border-teal-200">
             <div className="absolute top-6 right-6 bg-amber-400 text-slate-950 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
               {t.annualBadge}
@@ -330,8 +335,8 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-50 border-t border-slate-100 py-12 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 gap-4">
+      <footer className="bg-slate-50 border-t border-slate-100 py-12 px6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 gap-4 px-6">
           <div>&copy; {new Date().getFullYear()} Pebble. {t.rights}</div>
           <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-slate-900 transition">Privacy Policy</Link>
