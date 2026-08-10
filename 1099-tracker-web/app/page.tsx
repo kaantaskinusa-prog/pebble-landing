@@ -15,6 +15,8 @@ const content = {
     heroTitleHighlight: "Simplified",
     heroDesc: "Every pebble builds the road; track your earnings, log expenses, and master your taxes with Pebble.",
     downloadApp: "Download on App Store",
+    videoTitle: "See Pebble in Action",
+    videoDesc: "Track daily earnings, log expenses automatically, and take control of your 1099 finances.",
     previewTitle: "Designed for Independent Contractors",
     previewSubtitle: "Take a look inside the app. Clean, powerful, and built to save you time and money.",
     featuresTitle: "One Toolkit. Total Financial Clarity.",
@@ -69,6 +71,8 @@ const content = {
     heroTitleHighlight: "Simplificados",
     heroDesc: "Cada guijarro construye el camino; rastrea tus ingresos, controla tus gastos y domina tus impuestos fácilmente con Pebble.",
     downloadApp: "Descargar en App Store",
+    videoTitle: "Mira Pebble en Acción",
+    videoDesc: "Rastrea ganancias diarias, registra gastos automáticamente y toma el control de tus finanzas.",
     previewTitle: "Diseñado para Contratistas Independientes",
     previewSubtitle: "Echa un vistazo al interior de la app. Limpia, potente y diseñada para ahorrarte tiempo y dinero.",
     featuresTitle: "Una herramienta. Claridad financiera total.",
@@ -123,6 +127,8 @@ const content = {
     heroTitleHighlight: "Basitleştirildi",
     heroDesc: "Her çakıl taşı birikerek yolu kurar; kazançlarını takip et, giderlerini yönet ve vergilerini Pebble ile kolayca kontrol altına al.",
     downloadApp: "App Store'dan İndir",
+    videoTitle: "Pebble'ı Çalışırken Görün",
+    videoDesc: "Günlük kazançlarını takip et, giderlerini otomatik kaydet ve 1099 finansal yönetimini ele al.",
     previewTitle: "Bağımsız Çalışanlar İçin Tasarlandı",
     previewSubtitle: "Uygulamanın içine göz atın. Zamandan ve paradan tasarruf etmeniz için tertemiz ve güçlü bir deneyim.",
     featuresTitle: "Tek Araç. Tam Finansal Netlik.",
@@ -201,10 +207,34 @@ export default function LandingPage() {
         </div>
       </header>
 
-      <section className="pt-24 pb-16 px-6 text-center max-w-5xl mx-auto bg-white">
+      <section className="pt-24 pb-12 px-6 text-center max-w-5xl mx-auto bg-white">
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-8">{t.heroTitleFirst} <br />{t.heroTitleSecond} <span className="text-teal-600">{t.heroTitleHighlight}</span>.</h1>
-        <p className="text-xl text-slate-600 mb-12">{t.heroDesc}</p>
-        <a href="https://apps.apple.com" className="bg-slate-950 text-white px-10 py-4 rounded-xl text-lg font-semibold">{t.downloadApp}</a>
+        <p className="text-xl text-slate-600 mb-10">{t.heroDesc}</p>
+        <a href="https://apps.apple.com" className="inline-block bg-slate-950 text-white px-10 py-4 rounded-xl text-lg font-semibold mb-12">{t.downloadApp}</a>
+      </section>
+
+      {/* Video Showcase Section */}
+      <section className="py-12 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-2">
+            {t.videoTitle}
+          </h2>
+          <p className="text-slate-600 text-base">
+            {t.videoDesc}
+          </p>
+        </div>
+        <div className="relative overflow-hidden rounded-[32px] shadow-2xl border border-slate-200 bg-slate-950 aspect-video max-w-4xl mx-auto">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="w-full h-full object-cover"
+          >
+            <source src="/pebble-promo-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </section>
 
       {/* Preview Section with Hover Effects */}
