@@ -58,6 +58,8 @@ const content = {
     ctaTitle: "Ready to Take Control of Your Finances?",
     ctaDesc: "Join thousands of independent contractors who track their earnings and save money with Pebble every single week.",
     ctaApp: "Download App",
+    privacy: "Privacy Policy",
+    support: "Support",
     rights: "All rights reserved."
   },
   es: {
@@ -114,6 +116,8 @@ const content = {
     ctaTitle: "¿Listo para tomar el control de sus finanzas?",
     ctaDesc: "Únase a miles de contratistas independientes que rastrean sus ingresos y ahorran con Pebble cada semana.",
     ctaApp: "Descargar App",
+    privacy: "Política de Privacidad",
+    support: "Soporte",
     rights: "Todos los derechos reservados."
   },
   tr: {
@@ -170,6 +174,8 @@ const content = {
     ctaTitle: "Finansal Durumunun Kontrolünü Eline Almaya Hazır mısın?",
     ctaDesc: "Her hafta kazançlarını takip edip Pebble ile paradan tasarruf eden binlerce bağımsız çalışana katılın.",
     ctaApp: "Uygulamayı İndir",
+    privacy: "Gizlilik Politikası",
+    support: "Destek",
     rights: "Tüm hakları saklıdır."
   }
 };
@@ -229,6 +235,7 @@ export default function LandingPage() {
             loop 
             muted 
             playsInline 
+            controls 
             className="w-full h-full object-cover"
           >
             <source src="/pebble-promo-video.mp4" type="video/mp4" />
@@ -345,8 +352,16 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <footer className="py-12 px-6 bg-slate-50 border-t text-center text-slate-500 text-sm">
-        &copy; {new Date().getFullYear()} Pebble. {t.rights}
+      <footer className="py-12 px-6 bg-slate-50 border-t text-slate-500 text-sm">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            &copy; {new Date().getFullYear()} Pebble. {t.rights}
+          </div>
+          <div className="flex space-x-6">
+            <Link href="/privacy" className="hover:text-teal-600 transition">{t.privacy}</Link>
+            <Link href="/support" className="hover:text-teal-600 transition">{t.support}</Link>
+          </div>
+        </div>
       </footer>
     </div>
   );
