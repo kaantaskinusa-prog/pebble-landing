@@ -201,12 +201,28 @@ export default function LandingPage() {
   const [submitted, setSubmitted] = useState(false);
   const t = content[lang];
 
-  const handleWaitlistSubmit = (e: React.FormEvent) => {
+  // Supabase'e bağladığımız yeni ve güvenli fonksiyon:
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    // Buraya Supabase veya API isteğini bağlayabilirsin
-    console.log("Waitlist email:", email);
-    setSubmitted(true);
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const errorData = await response.json();
+        alert(`Hata: ${errorData.error || 'Bir sorun oluştu'}`);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Bir bağlantı hatası oluştu.");
+    }
   };
 
   return (
