@@ -15,6 +15,11 @@ const content = {
     heroTitleHighlight: "Simplified",
     heroDesc: "Every pebble builds the road; track your earnings, log expenses, and master your taxes with Pebble.",
     downloadApp: "Download on App Store",
+    waitlistTitle: "Get Early Access",
+    waitlistDesc: "We're launching soon on the App Store. Join the waitlist to get notified the second we go live!",
+    waitlistPlaceholder: "Enter your email address",
+    waitlistBtn: "Join Waitlist",
+    waitlistSuccess: "You're on the list! We'll notify you soon.",
     videoTitle: "See Pebble in Action",
     videoDesc: "Track daily earnings, log expenses automatically, and take control of your 1099 finances.",
     previewTitle: "Designed for Independent Contractors",
@@ -73,6 +78,11 @@ const content = {
     heroTitleHighlight: "Simplificados",
     heroDesc: "Cada guijarro construye el camino; rastrea tus ingresos, controla tus gastos y domina tus impuestos fácilmente con Pebble.",
     downloadApp: "Descargar en App Store",
+    waitlistTitle: "Obtén Acceso Anticipado",
+    waitlistDesc: "Pronto estaremos en la App Store. ¡Únete a la lista de espera para recibir una notificación!",
+    waitlistPlaceholder: "Ingresa tu correo electrónico",
+    waitlistBtn: "Unirse a la Lista",
+    waitlistSuccess: "¡Estás en la lista! Te avisaremos pronto.",
     videoTitle: "Mira Pebble en Acción",
     videoDesc: "Rastrea ganancias diarias, registra gastos automáticamente y toma el control de tus finanzas.",
     previewTitle: "Diseñado para Contratistas Independientes",
@@ -131,6 +141,11 @@ const content = {
     heroTitleHighlight: "Basitleştirildi",
     heroDesc: "Her çakıl taşı birikerek yolu kurar; kazançlarını takip et, giderlerini yönet ve vergilerini Pebble ile kolayca kontrol altına al.",
     downloadApp: "App Store'dan İndir",
+    waitlistTitle: "Erken Erişim Al",
+    waitlistDesc: "Yakında App Store'dayız. Uygulama yayına girdiği an haberdar olmak için bekleme listesine katıl!",
+    waitlistPlaceholder: "E-posta adresini gir",
+    waitlistBtn: "Listeye Katıl",
+    waitlistSuccess: "Listeye eklendin! Çok yakında haber vereceğiz.",
     videoTitle: "Pebble'ı Çalışırken Görün",
     videoDesc: "Günlük kazançlarını takip et, giderlerini otomatik kaydet ve 1099 finansal yönetimini ele al.",
     previewTitle: "Bağımsız Çalışanlar İçin Tasarlandı",
@@ -182,7 +197,17 @@ const content = {
 
 export default function LandingPage() {
   const [lang, setLang] = useState<'en' | 'es' | 'tr'>('en');
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   const t = content[lang];
+
+  const handleWaitlistSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    // Buraya Supabase veya API isteğini bağlayabilirsin
+    console.log("Waitlist email:", email);
+    setSubmitted(true);
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
@@ -211,7 +236,32 @@ export default function LandingPage() {
       <section className="pt-24 pb-12 px-6 text-center max-w-5xl mx-auto bg-white">
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-8">{t.heroTitleFirst} <br />{t.heroTitleSecond} <span className="text-teal-600">{t.heroTitleHighlight}</span>.</h1>
         <p className="text-xl text-slate-600 mb-10">{t.heroDesc}</p>
-        <a href="https://apps.apple.com" className="inline-block bg-slate-950 text-white px-10 py-4 rounded-xl text-lg font-semibold mb-12">{t.downloadApp}</a>
+        
+        {/* Waitlist Form Box */}
+        <div className="max-w-md mx-auto bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm mb-12">
+          <h3 className="text-lg font-bold text-slate-900 mb-2">{t.waitlistTitle}</h3>
+          <p className="text-xs text-slate-500 mb-4">{t.waitlistDesc}</p>
+          
+          {submitted ? (
+            <div className="bg-teal-50 text-teal-800 p-4 rounded-2xl text-sm font-semibold border border-teal-200">
+              {t.waitlistSuccess}
+            </div>
+          ) : (
+            <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder={t.waitlistPlaceholder}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="flex-1 bg-white border border-slate-300 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-teal-600"
+              />
+              <button type="submit" className="bg-teal-600 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-teal-700 transition shadow">
+                {t.waitlistBtn}
+              </button>
+            </form>
+          )}
+        </div>
       </section>
 
       {/* Video Showcase Section */}
