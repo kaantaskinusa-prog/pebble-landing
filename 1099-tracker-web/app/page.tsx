@@ -1,6 +1,5 @@
 'use client';
 
-import { createClient } from '@supabase/supabase-js';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -202,24 +201,22 @@ export default function LandingPage() {
   const [submitted, setSubmitted] = useState(false);
   const t = content[lang];
 
-  // Doğrudan Supabase'e bağlanan güvenli fonksiyon:
+  // API Route üzerinden güvenli kayıt ve e-posta gönderimi:
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     try {
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      );
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
 
-      const { error } = await supabase
-        .from('waitlist')
-        .insert([{ email }]);
+      const data = await response.json();
 
-      if (error) {
-        console.error("Supabase hatası:", error);
-        alert(`Hata: ${error.message}`);
+      if (!response.ok) {
+        alert(`Hata: ${data.error || 'Bir hata oluştu.'}`);
       } else {
         setSubmitted(true);
       }
