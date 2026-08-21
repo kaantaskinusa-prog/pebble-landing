@@ -210,7 +210,7 @@ export default function LandingPage() {
       const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
       const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
       
-      console.log("Supabase URL Kontrolü:", supabaseUrl ? "Yüklendi" : "BOŞ!");
+      console.log("Supabase URL:", supabaseUrl);
       
       const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -219,15 +219,15 @@ export default function LandingPage() {
         .insert([{ email }]);
 
       if (error) {
-        console.error("Supabase Hatası Detayı:", error);
-        alert(`Hata: ${error.message} (Kod: ${error.code})`);
+        console.error("Supabase Veritabanı Hatası:", error);
+        alert(`Supabase Hatası: ${error.message} (Kod: ${error.code})`);
       } else {
         console.log("Başarıyla kaydedildi:", data);
         setSubmitted(true);
       }
-    } catch (error) {
-      console.error("Bağlantı Hatası Detayı:", error);
-      alert("Bir bağlantı hatası oluştu.");
+    } catch (err: any) {
+      console.error("Bağlantı/Kod Hatası:", err);
+      alert(`Catch Hatası: ${err?.message || JSON.stringify(err)}`);
     }
   };
 
