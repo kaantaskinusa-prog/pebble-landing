@@ -2,12 +2,11 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
 
-// ---- BURAYA KENDİ SUPABASE BİLGİLERİNİ DOĞRUDAN YAZABİLİRSİN ----
+// ---- SUPABASE BİLGİLERİN (URL ve Publishable Key) ----
 const SUPABASE_URL = 'https://buraya-proje-id-gelecek.supabase.co';
-const SUPABASE_ANON_KEY = 'buraya-anon-public-key-gelecek';
-// -----------------------------------------------------------------
+const SUPABASE_ANON_KEY = 'sb_publishable_...';
+// -----------------------------------------------------
 
 const content = {
   en: {
@@ -212,17 +211,23 @@ export default function LandingPage() {
     if (!email) return;
 
     try {
-      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email })
+      });
 
-      const { error } = await supabase
-        .from('waitlist')
-        .insert([{ email }]);
-
-      if (error) {
-        if (error.code === '23505') {
+      if (!response.ok) {
+        const errData = await response.json().catch(() => ({}));
+        if (errData.code === '23505') {
           alert('Bu e-posta adresi zaten listede kayıtlı.');
         } else {
-          alert(`Hata: ${error.message}`);
+          alert(`Hata: ${errData.message || response.statusText}`);
         }
       } else {
         setSubmitted(true);
