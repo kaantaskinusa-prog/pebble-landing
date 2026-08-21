@@ -202,7 +202,6 @@ export default function LandingPage() {
   const [submitted, setSubmitted] = useState(false);
   const t = content[lang];
 
-  // Supabase istemcisi sadece buton tıklandığında (istek anında) güvenle oluşturulur
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
@@ -210,23 +209,24 @@ export default function LandingPage() {
     try {
       const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
       const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+      
+      console.log("Supabase URL Kontrolü:", supabaseUrl ? "Yüklendi" : "BOŞ!");
+      
       const supabase = createClient(supabaseUrl, supabaseKey);
 
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('waitlist')
         .insert([{ email }]);
 
       if (error) {
-        if (error.code === '23505') {
-          alert('Bu e-posta adresi zaten listede kayıtlı.');
-        } else {
-          alert(`Hata: ${error.message}`);
-        }
+        console.error("Supabase Hatası Detayı:", error);
+        alert(`Hata: ${error.message} (Kod: ${error.code})`);
       } else {
+        console.log("Başarıyla kaydedildi:", data);
         setSubmitted(true);
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Bağlantı Hatası Detayı:", error);
       alert("Bir bağlantı hatası oluştu.");
     }
   };
