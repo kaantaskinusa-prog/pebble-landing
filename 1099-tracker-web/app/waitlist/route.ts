@@ -1,11 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-
 export async function POST(request: Request) {
   try {
     const { email } = await request.json();
@@ -14,7 +9,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Geçerli bir e-posta adresi girin.' }, { status: 400 });
     }
 
-    // Supabase waitlist tablosuna sadece e-postayı ekliyoruz
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      return NextResponse.json({ error: 'Sunucu yapılandırma hatası.' }, { status: 500 });
+    }
+
+    // Supabase istemcisini burada, istek anında başlatıyoruz
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
     const { error } = await supabase
       .from('waitlist')
       .insert([{ email }]);
