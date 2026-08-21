@@ -2,6 +2,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { createClient } from '@supabase/supabase-js';
+
+// Supabase client (istemci tarafında veya server action içinde güvenli kullanım)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 const content = {
   en: {
@@ -201,22 +207,22 @@ export default function LandingPage() {
   const [submitted, setSubmitted] = useState(false);
   const t = content[lang];
 
-  // API Route üzerinden güvenli kayıt ve e-posta gönderimi:
+  // Doğrudan Supabase'e kaydeden fonksiyon (API Route gerektirmez)
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     try {
-      const response = await fetch('/api/waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
+      const { error } = await supabase
+        .from('waitlist')
+        .insert([{ email }]);
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        alert(`Hata: ${data.error || 'Bir hata oluştu.'}`);
+      if (error) {
+        if (error.code === '23505') {
+          alert('Bu e-posta adresi zaten listede kayıtlı.');
+        } else {
+          alert(`Hata: ${error.message}`);
+        }
       } else {
         setSubmitted(true);
       }
