@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
+// ---- BURAYA KENDİ SUPABASE BİLGİLERİNİ DOĞRUDAN YAZABİLİRSİN ----
+const SUPABASE_URL = 'https://buraya-proje-id-gelecek.supabase.co';
+const SUPABASE_ANON_KEY = 'buraya-anon-public-key-gelecek';
+// -----------------------------------------------------------------
+
 const content = {
   en: {
     features: "Features",
@@ -207,11 +212,7 @@ export default function LandingPage() {
     if (!email) return;
 
     try {
-      // Ortam değişkeni okunamazsa buradaki varsayılan değerler devreye girer
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'BURAYA_SUPABASE_URL_YAZACAKSIN';
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'BURAYA_SUPABASE_ANON_KEY_YAZACAKSIN';
-      
-      const supabase = createClient(supabaseUrl, supabaseKey);
+      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
       const { error } = await supabase
         .from('waitlist')
