@@ -207,27 +207,27 @@ export default function LandingPage() {
     if (!email) return;
 
     try {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-      
-      console.log("Supabase URL:", supabaseUrl);
+      // Ortam değişkeni okunamazsa buradaki varsayılan değerler devreye girer
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'BURAYA_SUPABASE_URL_YAZACAKSIN';
+      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'BURAYA_SUPABASE_ANON_KEY_YAZACAKSIN';
       
       const supabase = createClient(supabaseUrl, supabaseKey);
 
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('waitlist')
         .insert([{ email }]);
 
       if (error) {
-        console.error("Supabase Veritabanı Hatası:", error);
-        alert(`Supabase Hatası: ${error.message} (Kod: ${error.code})`);
+        if (error.code === '23505') {
+          alert('Bu e-posta adresi zaten listede kayıtlı.');
+        } else {
+          alert(`Hata: ${error.message}`);
+        }
       } else {
-        console.log("Başarıyla kaydedildi:", data);
         setSubmitted(true);
       }
     } catch (err: any) {
-      console.error("Bağlantı/Kod Hatası:", err);
-      alert(`Catch Hatası: ${err?.message || JSON.stringify(err)}`);
+      alert(`Bağlantı Hatası: ${err?.message || 'Bilinmeyen hata'}`);
     }
   };
 
