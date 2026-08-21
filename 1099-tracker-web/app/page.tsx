@@ -4,11 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
-// Supabase client (istemci tarafında veya server action içinde güvenli kullanım)
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || '';
-const supabase = createClient(supabaseUrl, supabaseKey);
-
 const content = {
   en: {
     features: "Features",
@@ -207,12 +202,16 @@ export default function LandingPage() {
   const [submitted, setSubmitted] = useState(false);
   const t = content[lang];
 
-  // Doğrudan Supabase'e kaydeden fonksiyon (API Route gerektirmez)
+  // Supabase istemcisi sadece buton tıklandığında (istek anında) güvenle oluşturulur
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     try {
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+      const supabase = createClient(supabaseUrl, supabaseKey);
+
       const { error } = await supabase
         .from('waitlist')
         .insert([{ email }]);
