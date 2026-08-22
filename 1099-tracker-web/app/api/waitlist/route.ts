@@ -1,19 +1,18 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-// Supabase URL ve Key bilgilerin
-const supabaseUrl = 'https://buraya-proje-id-gelecek.supabase.co';
-const supabaseKey = 'sb_publishable_...'; 
-
 export async function POST(request: Request) {
   try {
     const { email } = await request.json();
-    
+
     if (!email) {
       return NextResponse.json({ error: 'E-posta adresi gerekli.' }, { status: 400 });
     }
 
-    const supabase = createClient(supabaseUrl, supabaseKey);
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
 
     const { error } = await supabase
       .from('waitlist')
