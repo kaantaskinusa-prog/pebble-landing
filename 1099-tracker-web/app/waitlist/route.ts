@@ -1,22 +1,18 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
+// Supabase URL ve Key bilgilerin
+const supabaseUrl = 'https://buraya-proje-id-gelecek.supabase.co';
+const supabaseKey = 'sb_publishable_...'; 
+
 export async function POST(request: Request) {
   try {
     const { email } = await request.json();
-
-    if (!email || !email.includes('@')) {
-      return NextResponse.json({ error: 'Geçerli bir e-posta adresi girin.' }, { status: 400 });
+    
+    if (!email) {
+      return NextResponse.json({ error: 'E-posta adresi gerekli.' }, { status: 400 });
     }
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-    if (!supabaseUrl || !supabaseKey) {
-      return NextResponse.json({ error: 'Sunucu yapılandırma hatası.' }, { status: 500 });
-    }
-
-    // Supabase istemcisini burada, istek anında başlatıyoruz
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     const { error } = await supabase
@@ -31,7 +27,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (err) {
+  } catch (err: any) {
     return NextResponse.json({ error: 'Sunucu hatası oluştu.' }, { status: 500 });
   }
 }

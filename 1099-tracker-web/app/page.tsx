@@ -3,11 +3,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-// ---- SUPABASE BİLGİLERİN (URL ve Publishable Key) ----
-const SUPABASE_URL = 'https://buraya-proje-id-gelecek.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_...';
-// -----------------------------------------------------
-
 const content = {
   en: {
     features: "Features",
@@ -211,24 +206,19 @@ export default function LandingPage() {
     if (!email) return;
 
     try {
-      const response = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+      // Doğrudan Supabase yerine kendi Next.js API rotamıza istek atıyoruz
+      const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': SUPABASE_ANON_KEY,
-          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-          'Prefer': 'return=minimal'
         },
         body: JSON.stringify({ email })
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        const errData = await response.json().catch(() => ({}));
-        if (errData.code === '23505') {
-          alert('Bu e-posta adresi zaten listede kayıtlı.');
-        } else {
-          alert(`Hata: ${errData.message || response.statusText}`);
-        }
+        alert(`Hata: ${data.error || 'Bir hata oluştu.'}`);
       } else {
         setSubmitted(true);
       }
