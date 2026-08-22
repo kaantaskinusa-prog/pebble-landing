@@ -33,6 +33,37 @@ const content = {
     feat4Desc: "Available in English, Spanish, and Turkish. Manage your finances comfortably in your native language for maximum accuracy.",
     feat5Title: "Smart Email Summaries",
     feat5Desc: "Get automated weekly, quarterly, and year-end tax summaries delivered straight to your inbox.",
+    testimonialsTitle: "Loved by Drivers & Contractors",
+    testimonialsSubtitle: "See how Pebble is helping independent workers save time and maximize their tax deductions.",
+    t1Text: "As a full-time rideshare driver, tracking miles and gas receipts used to be a nightmare. Pebble's AI scanner saves me hours every week!",
+    t1Name: "Marcus Vance",
+    t1Role: "Rideshare Driver (Orlando)",
+    t2Text: "Finally an app that actually speaks my language and gets 1099 taxes. The Schedule C export made tax season an absolute breeze.",
+    t2Name: "Elena Rodriguez",
+    t2Role: "Independent Courier",
+    t3Text: "Clean interface, zero clutter, and super fast. Logging expenses by taking a photo of the receipt is a total game changer.",
+    t3Name: "David Chen",
+    t3Role: "Delivery Contractor",
+    faqHeading: "Frequently Asked Questions",
+    faqSubheading: "Got questions? We've got answers.",
+    faqs: [
+      {
+        q: "Is Pebble compliant with IRS tax requirements?",
+        a: "Yes! Pebble generates audit-ready Schedule C reports and logs business expenses following standard IRS guidelines to maximize your legal deductions."
+      },
+      {
+        q: "How does the AI receipt scanner work?",
+        a: "Simply take a photo of any receipt using your phone's camera. Pebble's optical character recognition (OCR) and AI instantly extract the vendor, date, total amount, and correct tax category."
+      },
+      {
+        q: "Can I use Pebble for multiple delivery or rideshare apps?",
+        a: "Absoulutely. Pebble is designed specifically for independent contractors handling multiple income streams like Uber, Lyft, DoorDash, and independent gigs."
+      },
+      {
+        q: "How do I manage my subscription?",
+        a: "All subscriptions and free trials are handled securely through your Apple App Store account, making updates or cancellations completely hassle-free."
+      }
+    ],
     pricingTitle: "Simple Pricing, Massive Savings",
     pricingDesc: "Choose the plan that fits your workflow. Subscribe securely via the App Store.",
     monthlyPlan: "Monthly",
@@ -93,6 +124,37 @@ const content = {
     feat4Desc: "Disponible en inglés, español y turco. Administre sus finanzas cómodamente en su idioma nativo.",
     feat5Title: "Resúmenes Inteligentes por Email",
     feat5Desc: "Reciba resúmenes fiscales automatizados semanales, trimestrales y anuales en su correo.",
+    testimonialsTitle: "Amado por Conductores y Contratistas",
+    testimonialsSubtitle: "Vea cómo Pebble ayuda a los trabajadores independientes a ahorrar tiempo y maximizar sus deducciones.",
+    t1Text: "Como conductor a tiempo completo, rastrear millas y recibos era una pesadilla. ¡El escáner de IA de Pebble me ahorra horas cada semana!",
+    t1Name: "Marcus Vance",
+    t1Role: "Conductor (Orlando)",
+    t2Text: "Por fin una app que entiende los impuestos 1099. La exportación Schedule C hizo que la temporada de impuestos fuera muy fácil.",
+    t2Name: "Elena Rodriguez",
+    t2Role: "Mensajera Independiente",
+    t3Text: "Interfaz limpia, cero distracciones y muy rápida. Registrar gastos tomando una foto del recibo cambia totalmente el juego.",
+    t3Name: "David Chen",
+    t3Role: "Contratista de Entregas",
+    faqHeading: "Preguntas Frecuentes",
+    faqSubheading: "¿Tienes dudas? Aquí tienes las respuestas.",
+    faqs: [
+      {
+        q: "¿Pebble cumple con los requisitos fiscales del IRS?",
+        a: "¡Sí! Pebble genera informes Schedule C listos para auditoría y registra gastos comerciales según las pautas estándar del IRS."
+      },
+      {
+        q: "¿Cómo funciona el escáner de recibos con IA?",
+        a: "Simplemente tome una foto de cualquier recibo. El OCR y la IA de Pebble extraen instantáneamente el proveedor, fecha y categoría."
+      },
+      {
+        q: "¿Puedo usar Pebble para múltiples aplicaciones de reparto o transporte?",
+        a: "Absolutamente. Pebble está diseñado para contratistas con múltiples fuentes de ingresos como Uber, Lyft y DoorDash."
+      },
+      {
+        q: "¿Cómo administro mi suscripción?",
+        a: "Todas las suscripciones y pruebas gratuitas se gestionan de forma segura a través de su cuenta de Apple App Store."
+      }
+    ],
     pricingTitle: "Precios Simples, Ahorros Masivos",
     pricingDesc: "Elija el plan que se adapte a su flujo de trabajo. Suscríbase de forma segura a través de la App Store.",
     monthlyPlan: "Mensual",
@@ -153,6 +215,37 @@ const content = {
     feat4Desc: "İngilizce, İspanyolca ve Türkçe seçenekleriyle. Finansal işlemlerinizi kendi anadilinizde konforla yönetin.",
     feat5Title: "Akıllı E-Posta Özetleri",
     feat5Desc: "Haftalık, üç aylık ve yıl sonu vergi özetlerini doğrudan e-posta kutuna otomatik al.",
+    testimonialsTitle: "Sürücüler ve Bağımsız Çalışanlar Severek Kullanıyor",
+    testimonialsSubtitle: "Pebble'ın bağımsız çalışanların zamandan tasarruf etmesine ve vergi indirimlerini maksimize etmesine nasıl yardımcı olduğunu görün.",
+    t1Text: "Tam zamanlı yolcu taşımacılığı yaparken mil ve benzin fişlerini takip etmek kabus gibiydi. Pebble'ın yapay zeka tarayıcısı bana her hafta saatler kazandırıyor!",
+    t1Name: "Marcus Vance",
+    t1Role: "Sürücü (Orlando)",
+    t2Text: "Sonunda 1099 vergilerini gerçekten anlayan bir uygulama çıktı. Schedule C dışa aktarımı vergi sezonunu çocuk oyuncağına çevirdi.",
+    t2Name: "Elena Rodriguez",
+    t2Role: "Bağımsız Kurye",
+    t3Text: "Tertemiz arayüz, sıfır karmaşa ve süper hızlı. Fişin fotoğrafını çekerek masraf kaydetmek oyunun kurallarını tamamen değiştiriyor.",
+    t3Name: "David Chen",
+    t3Role: "Teslimat Yüklenicisi",
+    faqHeading: "Sıkça Sorulan Sorular",
+    faqSubheading: "Aklınıza takılan soruların yanıtlarını burada bulabilirsiniz.",
+    faqs: [
+      {
+        q: "Pebble, IRS vergi gereksinimleriyle tam uyumlu mu?",
+        a: "Evet! Pebble, yasal indirimlerinizi en üst düzeye çıkarmanıza yardımcı olmak için IRS standartlarına uygun, denetime hazır Schedule C raporları üretir."
+      },
+      {
+        q: "Yapay zeka fiş tarayıcı nasıl çalışıyor?",
+        a: "Telefonunuzun kamerasıyla herhangi bir fişin fotoğrafını çekmeniz yeterlidir. Pebble'ın OCR ve yapay zeka altyapısı satıcıyı, tarihi ve tutarı anında ayıklar."
+      },
+      {
+        q: "Birden fazla teslimat veya sürüş uygulaması için Pebble kullanabilir miyim?",
+        a: "Kesinlikle. Pebble; Uber, Lyft, DoorDash ve benzeri birden fazla gelir akışını yöneten bağımsız yükleniciler için özel olarak tasarlanmıştır."
+      },
+      {
+        q: "Aboneliğimi nasıl yönetebilirim?",
+        a: "Tüm abonelikleriniz ve ücretsiz deneme süreçleriniz Apple App Store hesabınız üzerinden güvenle yönetilir, dilediğiniz an kolayca güncelleyebilir veya iptal edebilirsiniz."
+      }
+    ],
     pricingTitle: "Basit Fiyatlandırma, Büyük Tasarruf",
     pricingDesc: "Akışınıza uygun planı seçin. App Store üzerinden güvenle abone olun.",
     monthlyPlan: "Aylık",
@@ -188,10 +281,11 @@ const content = {
 
 export default function LandingPage() {
   const [lang, setLang] = useState<'en' | 'es' | 'tr'>('en');
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const t = content[lang];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-teal-500 selection:text-white">
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -200,6 +294,7 @@ export default function LandingPage() {
           </div>
           <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
             <a href="#features" className="hover:text-teal-600 transition">{t.features}</a>
+            <a href="#testimonials" className="hover:text-teal-600 transition">Reviews</a>
             <a href="#pricing" className="hover:text-teal-600 transition">{t.pricing}</a>
             <a href="#faq" className="hover:text-teal-600 transition">{t.faq}</a>
           </nav>
@@ -209,14 +304,14 @@ export default function LandingPage() {
               <option value="es">Español</option>
               <option value="tr">Türkçe</option>
             </select>
-            <a href="https://apps.apple.com" className="bg-teal-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold">{t.getPro}</a>
+            <a href="https://apps.apple.com" className="bg-teal-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-teal-700 transition">{t.getPro}</a>
           </div>
         </div>
       </header>
 
       <section className="pt-24 pb-12 px-6 text-center max-w-5xl mx-auto bg-white">
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-8">{t.heroTitleFirst} <br />{t.heroTitleSecond} <span className="text-teal-600">{t.heroTitleHighlight}</span>.</h1>
-        <p className="text-xl text-slate-600 mb-10">{t.heroDesc}</p>
+        <p className="text-xl text-slate-600 mb-10 max-w-3xl mx-auto">{t.heroDesc}</p>
         
         <div className="max-w-md mx-auto bg-white p-8 rounded-3xl border border-slate-200 shadow-inner mb-12 flex flex-col items-center">
           <h3 className="text-xl font-bold text-slate-900 mb-3">{t.appStoreTitle}</h3>
@@ -294,13 +389,26 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="pricing" className="py-24 bg-slate-50 px-6">
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24 bg-slate-50 border-t border-slate-100 px-6">
+        <div className="max-w-6xl mx-auto text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">{t.testimonialsTitle}</h2>
+          <p className="text-lg text-slate-600">{t.testimonialsSubtitle}</p>
+        </div>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <TestimonialCard text={t.t1Text} name={t.t1Name} role={t.t1Role} />
+          <TestimonialCard text={t.t2Text} name={t.t2Name} role={t.t2Role} />
+          <TestimonialCard text={t.t3Text} name={t.t3Name} role={t.t3Role} />
+        </div>
+      </section>
+
+      <section id="pricing" className="py-24 bg-white px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl font-extrabold text-center mb-4 tracking-tight">{t.pricingTitle}</h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">{t.pricingDesc}</p>
           
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            <div className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div className="bg-slate-50 p-8 rounded-[32px] border border-slate-200 shadow-sm flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-2 text-slate-900">{t.monthlyPlan}</h3>
                 <div className="flex items-baseline mb-3">
@@ -353,6 +461,37 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-24 bg-slate-50 border-t border-slate-100 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-3">{t.faqHeading}</h2>
+            <p className="text-slate-600">{t.faqSubheading}</p>
+          </div>
+          <div className="space-y-4">
+            {t.faqs.map((faq, index) => {
+              const isOpen = openFaq === index;
+              return (
+                <div key={index} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm transition">
+                  <button 
+                    onClick={() => setOpenFaq(isOpen ? null : index)}
+                    className="w-full text-left px-6 py-5 font-semibold text-slate-900 flex justify-between items-center focus:outline-none"
+                  >
+                    <span>{faq.q}</span>
+                    <span className={`text-teal-600 font-bold text-xl transition-transform duration-200 ${isOpen ? 'rotate-45' : ''}`}>+</span>
+                  </button>
+                  {isOpen && (
+                    <div className="px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-5xl mx-auto bg-teal-950 rounded-[36px] py-16 px-8 text-center text-white shadow-xl">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">{t.ctaTitle}</h2>
@@ -384,6 +523,18 @@ function FeatureCard({ icon, title, desc }: { icon: string, title: string, desc:
       <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center font-bold text-2xl mb-6">{icon}</div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-slate-600 text-sm font-light">{desc}</p>
+    </div>
+  );
+}
+
+function TestimonialCard({ text, name, role }: { text: string, name: string, role: string }) {
+  return (
+    <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+      <p className="text-slate-700 text-sm mb-6 leading-relaxed italic">"{text}"</p>
+      <div>
+        <h4 className="font-bold text-slate-900 text-sm">{name}</h4>
+        <span className="text-xs text-teal-600 font-medium">{role}</span>
+      </div>
     </div>
   );
 }
