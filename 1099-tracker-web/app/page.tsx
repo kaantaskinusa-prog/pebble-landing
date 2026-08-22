@@ -206,7 +206,6 @@ export default function LandingPage() {
     if (!email) return;
 
     try {
-      // Doğrudan Supabase yerine kendi Next.js API rotamıza istek atıyoruz
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: {
@@ -255,7 +254,6 @@ export default function LandingPage() {
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-8">{t.heroTitleFirst} <br />{t.heroTitleSecond} <span className="text-teal-600">{t.heroTitleHighlight}</span>.</h1>
         <p className="text-xl text-slate-600 mb-10">{t.heroDesc}</p>
         
-        {/* Waitlist Form Box */}
         <div className="max-w-md mx-auto bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm mb-12">
           <h3 className="text-lg font-bold text-slate-900 mb-2">{t.waitlistTitle}</h3>
           <p className="text-xs text-slate-500 mb-4">{t.waitlistDesc}</p>
@@ -282,7 +280,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Video Showcase Section */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-2">
@@ -307,7 +304,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Preview Section with Hover Effects */}
       <section className="py-16 bg-slate-50 border-t border-slate-100 px-6">
         <div className="max-w-6xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">{t.previewTitle}</h2>
@@ -342,14 +338,12 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-slate-50 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl font-extrabold text-center mb-4 tracking-tight">{t.pricingTitle}</h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">{t.pricingDesc}</p>
           
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            {/* Monthly Card */}
             <div className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-2 text-slate-900">{t.monthlyPlan}</h3>
@@ -373,7 +367,6 @@ export default function LandingPage() {
               </a>
             </div>
 
-            {/* Annual Card */}
             <div className="bg-teal-950 text-white p-8 rounded-[32px] border-2 border-teal-600 shadow-xl flex flex-col justify-between relative">
               <div className="absolute -top-4 right-8 bg-amber-400 text-slate-950 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
                 {t.annualBadge}
@@ -404,7 +397,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* CTA Banner Section */}
       <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-5xl mx-auto bg-teal-950 rounded-[36px] py-16 px-8 text-center text-white shadow-xl">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">{t.ctaTitle}</h2>
